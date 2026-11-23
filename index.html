@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OR KITCHENS · תכנון, עיצוב וייצור מטבחים ונגרות בהתאמה אישית</title>
+  <meta name="description" content="תכנון, עיצוב וייצור מטבחים, חדרי שינה, ארונות ונגרות בהתאמה אישית — מהרעיון וההדמיה ועד התקנה מושלמת." />
+  
+  <!-- Google Fonts: Bellefair, Frank Ruhl Libre, Assistant -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Bellefair&family=Frank+Ruhl+Libre:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Bellefair"', '"Frank Ruhl Libre"', 'serif'],
+            sans: ['"Assistant"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            background: 'oklch(0.155 0.016 165)',
+            foreground: 'oklch(0.95 0.014 85)',
+            card: 'oklch(0.195 0.019 165)',
+            primary: 'oklch(0.8 0.095 80)',
+            'primary-glow': 'oklch(0.88 0.08 88)',
+            'primary-foreground': 'oklch(0.17 0.018 165)',
+            secondary: 'oklch(0.235 0.022 165)',
+            muted: 'oklch(0.215 0.018 165)',
+            'muted-foreground': 'oklch(0.74 0.022 105)',
+            border: 'oklch(0.8 0.095 80 / 0.14)',
+            ivory: 'oklch(0.95 0.014 85)',
+            ink: 'oklch(0.12 0.014 165)',
+            'surface-elevated': 'oklch(0.175 0.017 165)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --background: oklch(0.155 0.016 165);
+      --foreground: oklch(0.95 0.014 85);
+      --primary: oklch(0.8 0.095 80);
+      --primary-glow: oklch(0.88 0.08 88);
+      --primary-foreground: oklch(0.17 0.018 165);
+      --muted-foreground: oklch(0.74 0.022 105);
+      --border: oklch(0.8 0.095 80 / 0.14);
+      --ivory: oklch(0.95 0.014 85);
+      --ink: oklch(0.12 0.014 165);
+      --surface-elevated: oklch(0.175 0.017 165);
+
+      --gradient-gold: linear-gradient(135deg, oklch(0.88 0.08 88), oklch(0.76 0.105 75) 55%, oklch(0.66 0.1 65));
+      --gradient-card: linear-gradient(160deg, oklch(0.22 0.022 165 / 0.9), oklch(0.17 0.017 165 / 0.9));
+      --gradient-hero-fade: linear-gradient(180deg, oklch(0.11 0.014 165 / 0.68) 0%, oklch(0.11 0.014 165 / 0.42) 42%, oklch(0.155 0.016 165) 100%);
+      --gradient-hero-scrim: radial-gradient(75% 70% at 80% 45%, oklch(0.1 0.014 165 / 0.72) 0%, oklch(0.1 0.014 165 / 0.28) 55%, transparent 100%);
+      --gradient-radial-glow: radial-gradient(60% 50% at 50% 0%, oklch(0.8 0.095 80 / 0.12), transparent 70%);
+      --shadow-gold: 0 10px 40px -12px oklch(0.8 0.095 80 / 0.45);
+      --shadow-card: 0 30px 60px -30px oklch(0.05 0.01 165 / 0.8);
+    }
+
+    * { border-color: var(--border); }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: "Assistant", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: "Bellefair", "Frank Ruhl Libre", serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    ::selection {
+      background: oklch(0.8 0.095 80 / 0.35);
+      color: var(--foreground);
+    }
+
+    .text-gradient-gold {
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .bg-gradient-gold { background: var(--gradient-gold); }
+    .bg-hero-fade { background: var(--gradient-hero-fade); }
+    .bg-hero-scrim { background: var(--gradient-hero-scrim); }
+    [dir="ltr"] .bg-hero-scrim {
+      background: radial-gradient(75% 70% at 20% 45%, oklch(0.1 0.014 165 / 0.72) 0%, oklch(0.1 0.014 165 / 0.28) 55%, transparent 100%);
+    }
+    .bg-radial-glow { background: var(--gradient-radial-glow); }
+    .shadow-gold { box-shadow: var(--shadow-gold); }
+
+    .card-luxe {
+      background: var(--gradient-card);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow-card);
+      transition: border-color 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .card-luxe:hover {
+      border-color: oklch(0.8 0.095 80 / 0.38);
+      box-shadow: 0 32px 64px -28px oklch(0.05 0.01 165 / 0.9), 0 0 0 1px oklch(0.8 0.095 80 / 0.12);
+    }
+
+    .section-band {
+      background-color: var(--surface-elevated);
+      border-block: 1px solid var(--border);
+    }
+
+    .glass {
+      background: oklch(0.155 0.016 165 / 0.62);
+      backdrop-filter: blur(18px) saturate(1.3);
+      -webkit-backdrop-filter: blur(18px) saturate(1.3);
+    }
+
+    .eyebrow {
+      font-family: "Assistant", system-ui, sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    [dir="rtl"] .eyebrow {
+      letter-spacing: 0.06em;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, oklch(0.8 0.095 80 / 0.6), transparent);
+    }
+
+    /* Buttons */
+    .btn-hero {
+      background: var(--gradient-gold);
+      color: var(--primary-foreground);
+      font-weight: 600;
+      box-shadow: var(--shadow-gold);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .btn-hero:hover {
+      filter: brightness(1.06);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      border: 1px solid oklch(0.8 0.095 80 / 0.45);
+      color: var(--primary);
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      background: oklch(0.8 0.095 80 / 0.12);
+      border-color: var(--primary);
+    }
+
+    .btn-glass {
+      background: oklch(0.155 0.016 165 / 0.62);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      color: var(--ivory);
+      transition: all 0.3s ease;
+    }
+    .btn-glass:hover {
+      border-color: oklch(0.8 0.095 80 / 0.5);
+      color: var(--primary);
+    }
+
+    /* Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 1s cubic-bezier(0.2, 0.7, 0.2, 1), transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .img-zoom img {
+      transition: transform 1.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+    .img-zoom:hover img {
+      transform: scale(1.06);
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 40s linear infinite;
+    }
+
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .animate-float-slow {
+      animation: float-slow 9s ease-in-out infinite;
+    }
+
+    @keyframes hero-zoom {
+      from { transform: scale(1.12); }
+      to { transform: scale(1); }
+    }
+    .animate-hero-zoom {
+      animation: hero-zoom 2.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500 py-6">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 md:px-8">
+      <!-- Logo -->
+      <a href="#home" onclick="navigate('home')" class="group inline-flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/50 bg-primary/10 font-display text-lg text-primary transition-transform duration-500 group-hover:scale-105">
+          OR
+        </span>
+        <div class="flex flex-col">
+          <span class="font-display text-xl tracking-wider text-foreground">OR KITCHENS</span>
+          <span class="text-[0.65rem] tracking-widest text-primary/80" data-i18n="brand_tagline_short">BESPOKE MILLWORK</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden items-center gap-9 lg:flex">
+        <a href="#home" onclick="navigate('home')" data-nav="home" class="nav-link relative text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary" data-i18n="nav_home">בית</a>
+        <a href="#projects" onclick="navigate('projects')" data-nav="projects" class="nav-link relative text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary" data-i18n="nav_projects">פרויקטים</a>
+        <a href="#about" onclick="navigate('about')" data-nav="about" class="nav-link relative text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary" data-i18n="nav_about">אודות</a>
+        <a href="#contact" onclick="navigate('contact')" data-nav="contact" class="nav-link relative text-sm tracking-wide text-foreground/80 transition-colors hover:text-primary" data-i18n="nav_contact">צור קשר</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2 md:gap-3">
+        <button type="button" onclick="toggleLang()" id="lang-btn" class="h-9 min-w-11 rounded-full border border-border px-3 text-xs font-semibold tracking-widest text-foreground/80 transition-colors hover:border-primary hover:text-primary" aria-label="Switch language">
+          EN
+        </button>
+        <a href="#contact" onclick="navigate('contact')" class="btn-hero hidden md:inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm" data-i18n="cta_consult">
+          לתיאום פגישת ייעוץ
+        </a>
+        <button type="button" onclick="toggleMobileMenu(true)" class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground lg:hidden" aria-label="תפריט">
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] flex flex-col bg-background transition-all duration-500 lg:hidden invisible opacity-0">
+    <div class="bg-radial-glow absolute inset-0" aria-hidden="true"></div>
+    <div class="relative flex items-center justify-between px-5 py-6">
+      <a href="#home" onclick="navigate('home'); toggleMobileMenu(false)" class="inline-flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/50 bg-primary/10 font-display text-lg text-primary">OR</span>
+        <span class="font-display text-xl tracking-wider text-foreground">OR KITCHENS</span>
+      </a>
+      <button type="button" onclick="toggleMobileMenu(false)" class="flex h-10 w-10 items-center justify-center rounded-full border border-border" aria-label="סגירה">
+        <i data-lucide="x" class="h-5 w-5"></i>
+      </button>
+    </div>
+    <nav class="relative flex flex-1 flex-col justify-center gap-4 px-8">
+      <a href="#home" onclick="navigate('home'); toggleMobileMenu(false)" class="font-display text-5xl text-foreground hover:text-primary" data-i18n="nav_home">בית</a>
+      <a href="#projects" onclick="navigate('projects'); toggleMobileMenu(false)" class="font-display text-5xl text-foreground hover:text-primary" data-i18n="nav_projects">פרויקטים</a>
+      <a href="#about" onclick="navigate('about'); toggleMobileMenu(false)" class="font-display text-5xl text-foreground hover:text-primary" data-i18n="nav_about">אודות</a>
+      <a href="#contact" onclick="navigate('contact'); toggleMobileMenu(false)" class="font-display text-5xl text-foreground hover:text-primary" data-i18n="nav_contact">צור קשר</a>
+    </nav>
+    <div class="relative p-8">
+      <a href="#contact" onclick="navigate('contact'); toggleMobileMenu(false)" class="btn-hero flex w-full items-center justify-center rounded-full py-4 text-base" data-i18n="cta_consult">
+        לתיאום פגישת ייעוץ
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="app-root" class="flex-1"></main>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/972524480444" target="_blank" rel="noreferrer" aria-label="WhatsApp" class="fixed bottom-6 start-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform duration-300 hover:scale-110">
+    <i data-lucide="message-circle" class="h-7 w-7"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="relative mt-24 border-t border-border">
+    <div class="bg-radial-glow pointer-events-none absolute inset-x-0 top-0 h-64" aria-hidden="true"></div>
+    <div class="relative mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-3 md:px-8">
+      <div class="space-y-5">
+        <a href="#home" onclick="navigate('home')" class="inline-flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/50 bg-primary/10 font-display text-lg text-primary">OR</span>
+          <span class="font-display text-xl tracking-wider text-foreground">OR KITCHENS</span>
+        </a>
+        <p class="max-w-xs text-sm leading-relaxed text-muted-foreground" data-i18n="hero_subtitle">
+          מהחזון העיצובי וההדמיה הראשונה ועד ייצור מדויק במפעל מתקדם והתקנה מושלמת בבית שלכם.
+        </p>
+      </div>
+
+      <div class="space-y-4 text-sm">
+        <h3 class="eyebrow" data-i18n="contact_details">פרטי התקשרות</h3>
+        <a href="tel:052-4480444" class="flex items-center gap-3 text-foreground/85 hover:text-primary">
+          <i data-lucide="phone" class="h-4 w-4 text-primary"></i>
+          <span dir="ltr">052-4480444</span>
+        </a>
+        <a href="mailto:orkitchens@gmail.com" class="flex items-center gap-3 text-foreground/85 hover:text-primary">
+          <i data-lucide="mail" class="h-4 w-4 text-primary"></i>
+          <span>orkitchens@gmail.com</span>
+        </a>
+        <p class="flex items-center gap-3 text-foreground/85">
+          <i data-lucide="map-pin" class="h-4 w-4 text-primary"></i>
+          <span data-i18n="contact_address">פריסה ארצית · תיאום פגישות ייעוץ</span>
+        </p>
+      </div>
+
+      <div class="space-y-4 text-sm">
+        <h3 class="eyebrow" data-i18n="nav_projects">פרויקטים</h3>
+        <div class="flex flex-col gap-2">
+          <a href="#projects" onclick="navigate('projects', 'kitchen')" class="text-foreground/85 hover:text-primary" data-i18n="cat_kitchen">מטבחים</a>
+          <a href="#projects" onclick="navigate('projects', 'bedroom')" class="text-foreground/85 hover:text-primary" data-i18n="cat_bedroom">חדרי שינה וארונות</a>
+          <a href="#projects" onclick="navigate('projects', 'closets')" class="text-foreground/85 hover:text-primary" data-i18n="cat_closets">ספריות ונגרות משלימה</a>
+        </div>
+        <div class="flex gap-3 pt-2">
+          <a href="https://wa.me/972524480444" target="_blank" rel="noreferrer" aria-label="WhatsApp" class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-primary transition-colors hover:border-primary hover:bg-primary/10">
+            <i data-lucide="message-circle" class="h-4 w-4"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-primary transition-colors hover:border-primary hover:bg-primary/10">
+            <i data-lucide="instagram" class="h-4 w-4"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" class="flex h-10 w-10 items-center justify-center rounded-full border border-border text-primary transition-colors hover:border-primary hover:bg-primary/10">
+            <i data-lucide="facebook" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="gold-line"></div>
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 pb-12 pt-6 text-center text-xs text-muted-foreground md:flex-row md:px-8 md:text-start">
+      <span>© <span id="current-year"></span> OR KITCHENS · <span data-i18n="footer_rights">כל הזכויות שמורות</span></span>
+      <span class="text-muted-foreground/80" data-i18n="footer_disclaimer">התמונות להמחשה בלבד · חלק מהתמונות נוצרו בעזרת בינה מלאכותית</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="fixed inset-0 z-[70] hidden items-center justify-center bg-ink/95 p-4 backdrop-blur-xl" onclick="closeLightbox()">
+    <button type="button" onclick="closeLightbox()" class="absolute top-6 end-6 flex h-12 w-12 items-center justify-center rounded-full border border-border text-ivory hover:border-primary hover:text-primary">
+      <i data-lucide="x" class="h-6 w-6"></i>
+    </button>
+    <div class="max-h-[90vh] max-w-5xl overflow-hidden rounded-2xl border border-border" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="" class="max-h-[80vh] w-auto object-contain" />
+      <div class="bg-card p-4 text-center">
+        <h4 id="lightbox-title" class="font-display text-2xl text-ivory"></h4>
+        <p id="lightbox-sub" class="text-sm text-primary"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- TRANSLATIONS & CONTENT (From site-defaults.ts & i18n.tsx) ---
+    const dict = {
+      he: {
+        brand_tagline_short: "תכנון · עיצוב · ייצור",
+        nav_home: "בית",
+        nav_projects: "פרויקטים",
+        nav_about: "אודות",
+        nav_contact: "צור קשר",
+        cta_consult: "לתיאום פגישת ייעוץ",
+        cta_view_projects: "לכל העבודות",
+        cta_all_projects: "לכל העבודות",
+        cta_explore: "לצפייה בעבודות",
+        cta_read_more: "קראו עוד",
+        cta_whatsapp: "שלחו וואטסאפ",
+        hero_eyebrow: "תכנון · עיצוב · ייצור בהתאמה אישית",
+        hero_title: "מטבחים ונגרות שנבנים מתוך מחשבה על כל פרט",
+        hero_subtitle: "מהחזון העיצובי וההדמיה הראשונה ועד ייצור מדויק במפעל מתקדם והתקנה מושלמת בבית שלכם.",
+        stat_1_value: "+250",
+        stat_1_label: "פרויקטים בהתאמה אישית",
+        stat_2_value: "0.1 מ״מ",
+        stat_2_label: "דיוק חיתוך וגימור במפעל",
+        stat_3_value: "100%",
+        stat_3_label: "תכנון וליווי מקצה לקצה",
+        section_about: "תכנון ונגרות בהתאמה אישית",
+        about_badge_label: "מעטפת מלאה מתכנון ועד התקנה",
+        about_title: "מטבחים שנבנים מתוך מחשבה על כל פרט",
+        about_text_1: "כל מטבח מתחיל בהבנה עמוקה של הבית, ההרגלים והצרכים היומיומיים שלכם. אנחנו שמים דגש על תכנון חכם של החלל, חלוקה מדויקת של אזורי העבודה, פתרונות אחסון נסתרים, בחירת חומרים ופרזול מהשורה הראשונה — ועל ביצוע מוקפד עד למילימטר האחרון.",
+        about_text_2: "לצד ההתמחות במטבחים, אנחנו מתכננים ומייצרים גם ארונות קיר, חדרי ארונות, מיטות, ספריות ברזל וריהוט משלים בהתאמה אישית מלאה.",
+        section_services: "תחומי התמחות",
+        section_services_title: "שלושה עולמות. שפה עיצובית אחת.",
+        service_kitchen_title: "מטבחי יוקרה",
+        service_kitchen_text: "תכנון ארגונומי, איים מרשימים, מזווים אינטגרליים ומערכות פרזול חכמות — מטבח שנראה מושלם ועובד בהרמוניה.",
+        service_bedroom_title: "חדרי שינה וארונות",
+        service_bedroom_text: "מיטות מעוצבות, קירות כוח, חדרי ארונות וארונות קיר בקו אפס עם תאורה נסתרת וחלוקה פנימית מדויקת.",
+        service_closets_title: "ספריות ונגרות משלימה",
+        service_closets_text: "ספריות ברזל ועץ, יחידות מדיה, חיפויי קיר ופריטי נגרות בהתאמה אישית היוצרים שפה הרמונית בכל חללי הבית.",
+        section_featured: "פרויקטים נבחרים",
+        section_featured_title: "בתים שתכננו וייצרנו יחד",
+        section_process: "תהליך העבודה",
+        process_title: "מהרעיון ועד הבית",
+        process_1_title: "אפיון ותכנון חלל",
+        process_1_text: "לומדים את הרגלי הבישול והאירוח, מודדים את השטח ומתכננים הנדסת אנוש מדויקת.",
+        process_2_title: "הדמיה ובחירת חומרים",
+        process_2_text: "הדמיות תלת־ממד ריאליסטיות והתאמה אישית של חזיתות, משטחים, גוונים ופרזול.",
+        process_3_title: "ייצור ממוחשב במפעל",
+        process_3_text: "הורדה לייצור בטכנולוגיית חיתוך וגימור מתקדמת תחת בקרת איכות קפדנית.",
+        process_4_title: "התקנה ומסירה מושלמת",
+        process_4_text: "תיאום מלא וליווי צמוד עד להרכבה מדויקת בביתכם ועמידה מלאה בלוחות הזמנים.",
+        section_testimonials: "לקוחות מספרים",
+        section_testimonials_title: "מה נשאר אחרי המסירה",
+        section_contact: "בואו נדבר",
+        cta_title: "בואו נתכנן את הפרויקט הבא שלכם",
+        cta_text: "השאירו פרטים או שלחו הודעה ישירה בוואטסאפ ונחזור אליכם בהקדם לתיאום פגישת ייעוץ ותכנון.",
+        contact_details: "פרטי התקשרות",
+        contact_address: "פריסה ארצית · תיאום פגישות ייעוץ",
+        cat_all: "הכל",
+        cat_kitchen: "מטבחים",
+        cat_bedroom: "חדרי שינה וארונות",
+        cat_closets: "ספריות ונגרות משלימה",
+        projects_title: "תיק עבודות",
+        projects_subtitle: "מבחר פרויקטים שתוכננו ויוצרו בהתאמה אישית — מטבחים, חדרי שינה, ארונות ונגרות משלימה.",
+        form_name: "שם מלא",
+        form_phone: "טלפון",
+        form_type: "סוג הפרויקט",
+        form_message: "ספרו לי קצת על הפרויקט",
+        form_submit: "שליחה בוואטסאפ",
+        footer_rights: "כל הזכויות שמורות",
+        footer_disclaimer: "התמונות להמחשה בלבד · חלק מהתמונות נוצרו בעזרת בינה מלאכותית",
+        lang_switch: "EN"
+      },
+      en: {
+        brand_tagline_short: "BESPOKE MILLWORK",
+        nav_home: "Home",
+        nav_projects: "Projects",
+        nav_about: "About",
+        nav_contact: "Contact",
+        cta_consult: "Book a consultation",
+        cta_view_projects: "Explore our work",
+        cta_all_projects: "All projects",
+        cta_explore: "Explore works",
+        cta_read_more: "Read more",
+        cta_whatsapp: "WhatsApp us",
+        hero_eyebrow: "Bespoke Planning · Design · Manufacturing",
+        hero_title: "Kitchens & millwork crafted around every detail",
+        hero_subtitle: "From initial vision and 3D renders to precision factory manufacturing and flawless installation in your home.",
+        stat_1_value: "250+",
+        stat_1_label: "Bespoke projects",
+        stat_2_value: "0.1 mm",
+        stat_2_label: "Factory cutting & finish precision",
+        stat_3_value: "100%",
+        stat_3_label: "End-to-end planning & guidance",
+        section_about: "Bespoke planning & millwork",
+        about_badge_label: "Full scope from concept to handover",
+        about_title: "Kitchens built with thought for every detail",
+        about_text_1: "Every kitchen begins with a deep understanding of your home, habits and daily routines. We focus on intelligent spatial planning, concealed storage, premium materials and precision execution.",
+        about_text_2: "Alongside bespoke kitchens, we also craft flush wardrobes, walk-in closets, beds, steel libraries and custom millwork throughout the home.",
+        section_services: "Expertise",
+        section_services_title: "Three worlds. One design language.",
+        service_kitchen_title: "Luxury Kitchens",
+        service_kitchen_text: "Ergonomic planning, sculptural islands, concealed pantries and smart hardware — a kitchen that looks refined and works effortlessly.",
+        service_bedroom_title: "Bedrooms & Wardrobes",
+        service_bedroom_text: "Tailored beds, architectural feature walls, walk-in closets and flush wardrobes with concealed lighting and precise interiors.",
+        service_closets_title: "Libraries & Custom Millwork",
+        service_closets_text: "Steel-and-oak libraries, media walls, architectural wall paneling and custom pieces uniting every room in one design language.",
+        section_featured: "Selected work",
+        section_featured_title: "Homes we designed & crafted",
+        section_process: "The process",
+        process_title: "From idea to home",
+        process_1_title: "Spatial discovery & planning",
+        process_1_text: "Understanding your routines, measuring on site and engineering ergonomic proportions.",
+        process_2_title: "3D renders & material selection",
+        process_2_text: "Photorealistic 3D visuals and curated fronts, stone surfaces, tones and hardware.",
+        process_3_title: "Precision factory production",
+        process_3_text: "CNC precision cutting and multi-stage finishing under strict quality control.",
+        process_4_title: "Installation & handover",
+        process_4_text: "Full coordination and close supervision through spotless installation, right on schedule.",
+        section_testimonials: "Client stories",
+        section_testimonials_title: "What stays after handover",
+        section_contact: "Let's talk",
+        cta_title: "Let's plan your next project",
+        cta_text: "Leave your details or message us directly on WhatsApp and we will get back to you shortly to arrange a consultation.",
+        contact_details: "Contact details",
+        contact_address: "Nationwide · Consultation by appointment",
+        cat_all: "All",
+        cat_kitchen: "Kitchens",
+        cat_bedroom: "Bedrooms & Wardrobes",
+        cat_closets: "Libraries & Millwork",
+        projects_title: "Portfolio",
+        projects_subtitle: "A curated collection of bespoke kitchens, master bedrooms, wardrobes and custom millwork.",
+        form_name: "Full name",
+        form_phone: "Phone",
+        form_type: "Project type",
+        form_message: "Tell me a little about your project",
+        form_submit: "Send via WhatsApp",
+        footer_rights: "All rights reserved",
+        footer_disclaimer: "Images for illustration purposes only · Some images were generated with AI",
+        lang_switch: "עב"
+      }
+    };
+
+    // --- PROJECTS DATA (Using exact images from public/images/) ---
+    const projectsData = [
+      { id: 1, category: "kitchen", featured: true, img: "images/hero-kitchen.jpg", title_he: "מטבח אי פורניר אגוז ושיש טבעי", title_en: "Walnut Veneer & Natural Stone Kitchen", loc_he: "הרצליה פיתוח", loc_en: "Herzliya Pituach" },
+      { id: 2, category: "kitchen", featured: true, img: "images/kitchen-olive.jpg", title_he: "מטבח ירוק זית בקו מינימליסטי", title_en: "Olive Green Minimalist Kitchen", loc_he: "תל אביב", loc_en: "Tel Aviv" },
+      { id: 3, category: "bedroom", featured: true, img: "images/bedroom-suite.jpg", title_he: "סוויטת הורים וחיפוי קיר מרופד", title_en: "Master Bedroom Suite & Wall Paneling", loc_he: "קיסריה", loc_en: "Caesarea" },
+      { id: 4, category: "closets", featured: true, img: "images/living-media-wall.jpg", title_he: "קיר מדיה וספריית אלון וברזל", title_en: "Oak & Steel Media Wall Library", loc_he: "רמת השרון", loc_en: "Ramat HaSharon" },
+      { id: 5, category: "bedroom", featured: true, img: "images/closet-walkin.jpg", title_he: "חדר ארונות עם תאורת LED נסתרת", title_en: "Walk-in Closet with Concealed LED", loc_he: "סביון", loc_en: "Savyon" },
+      { id: 6, category: "kitchen", featured: false, img: "images/kitchen-island-detail.jpg", title_he: "אי מרכזי עם בר ישיבה משולב", title_en: "Sculptural Island & Dining Bar", loc_he: "מודיעין", loc_en: "Modi'in" },
+      { id: 7, category: "kitchen", featured: false, img: "images/kitchen-minimal.jpg", title_he: "מטבח חזיתות נאנו בגוון שמנת", title_en: "Cream Nano-Matte Kitchen", loc_he: "רעננה", loc_en: "Ra'anana" },
+      { id: 8, category: "kitchen", featured: false, img: "images/kitchen-walnut-bar.jpg", title_he: "מטבח שחור פחם ואגוז אמריקאי", title_en: "Charcoal & American Walnut Kitchen", loc_he: "ראשון לציון", loc_en: "Rishon LeZion" },
+      { id: 9, category: "bedroom", featured: false, img: "images/bedroom-wardrobe.jpg", title_he: "ארון קיר בקו אפס עם ידיות אינטגרליות", title_en: "Flush Wardrobe with Integrated Pulls", loc_he: "גבעתיים", loc_en: "Givatayim" },
+      { id: 10, category: "closets", featured: false, img: "images/library-oak.jpg", title_he: "ספריית סלון בעיצוב אדריכלי", title_en: "Architectural Living Room Library", loc_he: "ירושלים", loc_en: "Jerusalem" },
+      { id: 11, category: "closets", featured: false, img: "images/dining-carpentry.jpg", title_he: "פינת אוכל וחיפויי עץ תואמים", title_en: "Custom Dining & Wood Cladding", loc_he: "נתניה", loc_en: "Netanya" }
+    ];
+
+    const testimonialsData = [
+      { name_he: "דנה ורועי לוי · הרצליה", name_en: "Dana & Roy Levy · Herzliya", text_he: "מהפגישה הראשונה הרגשנו שאנחנו בידיים הכי מקצועיות שיש. התכנון ניצל כל סנטימטר במטבח והגימור במפעל פשוט מושלם.", text_en: "From the very first meeting we knew we were in the best hands. Every centimeter was utilized smartly and the factory finish is flawless." },
+      { name_he: "מיכל אברהמי · תל אביב", name_en: "Michal Avrahami · Tel Aviv", text_he: "עשינו עם OR KITCHENS את המטבח, חדר הארונות וקיר הטלוויזיה. השפה העיצובית האחידה הפכה את הדירה לקטלוג.", text_en: "OR KITCHENS crafted our kitchen, walk-in closet and media wall. The unified design language turned our apartment into a showroom." },
+      { name_he: "עומר ויעל כהן · מודיעין", name_en: "Omer & Yael Cohen · Modi'in", text_he: "דיוק של מילימטרים, עמידה מלאה בלוחות הזמנים ויחס אישי לאורך כל הדרך. ממליצים מכל הלב.", text_en: "Millimeter precision, strict adherence to schedules and personal guidance throughout. Wholeheartedly recommended." }
+    ];
+
+    // --- STATE ---
+    let currentLang = "he";
+    let currentRoute = "home";
+    let currentCategory = "all";
+
+    function t(key) {
+      return dict[currentLang][key] || key;
+    }
+
+    function toggleLang() {
+      currentLang = currentLang === "he" ? "en" : "he";
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === "he" ? "rtl" : "ltr";
+      document.getElementById("lang-btn").textContent = t("lang_switch");
+      render();
+    }
+
+    function navigate(route, category = "all") {
+      currentRoute = route;
+      if (category) currentCategory = category;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      render();
+    }
+
+    function toggleMobileMenu(open) {
+      const menu = document.getElementById("mobile-menu");
+      if (open) {
+        menu.classList.remove("invisible", "opacity-0");
+        menu.classList.add("visible", "opacity-100");
+        document.body.style.overflow = "hidden";
+      } else {
+        menu.classList.add("invisible", "opacity-0");
+        menu.classList.remove("visible", "opacity-100");
+        document.body.style.overflow = "";
+      }
+    }
+
+    function openLightbox(img, title, sub) {
+      document.getElementById("lightbox-img").src = img;
+      document.getElementById("lightbox-title").textContent = title;
+      document.getElementById("lightbox-sub").textContent = sub;
+      const lb = document.getElementById("lightbox");
+      lb.classList.remove("hidden");
+      lb.classList.add("flex");
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById("lightbox");
+      lb.classList.add("hidden");
+      lb.classList.remove("flex");
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById("f-name").value;
+      const phone = document.getElementById("f-phone").value;
+      const type = document.getElementById("f-type").value;
+      const msg = document.getElementById("f-msg").value;
+      const text = encodeURIComponent(`שלום OR KITCHENS, אשמח לתיאום ייעוץ.\nשם: ${name}\nטלפון: ${phone}\nסוג פרויקט: ${type}\nהודעה: ${msg}`);
+      window.open(`https://wa.me/972524480444?text=${text}`, "_blank");
+    }
+
+    // --- COMPONENTS ---
+    function renderContactForm() {
+      return `
+        <form onsubmit="handleContactSubmit(event)" class="card-luxe space-y-5 p-8 md:p-10">
+          <div>
+            <label class="mb-2 block text-xs text-muted-foreground">${t("form_name")}</label>
+            <input id="f-name" type="text" required class="w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none" />
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label class="mb-2 block text-xs text-muted-foreground">${t("form_phone")}</label>
+              <input id="f-phone" type="tel" required dir="ltr" class="w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none" />
+            </div>
+            <div>
+              <label class="mb-2 block text-xs text-muted-foreground">${t("form_type")}</label>
+              <select id="f-type" class="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none">
+                <option value="${t("cat_kitchen")}">${t("cat_kitchen")}</option>
+                <option value="${t("cat_bedroom")}">${t("cat_bedroom")}</option>
+                <option value="${t("cat_closets")}">${t("cat_closets")}</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="mb-2 block text-xs text-muted-foreground">${t("form_message")}</label>
+            <textarea id="f-msg" rows="3" class="w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none"></textarea>
+          </div>
+          <button type="submit" class="btn-hero flex w-full items-center justify-center gap-2 rounded-full py-4 text-sm">
+            <i data-lucide="message-circle" class="h-4 w-4"></i>
+            <span>${t("form_submit")}</span>
+          </button>
+        </form>
+      `;
+    }
+
+    function renderHome() {
+      const arrowIcon = currentLang === "he" ? "arrow-up-left" : "arrow-up-right";
+      const featured = projectsData.filter(p => p.featured).slice(0, 5);
+      const marqueeWords = [t("cat_kitchen"), t("cat_bedroom"), t("cat_closets"), t("cat_kitchen"), t("cat_bedroom"), t("cat_closets")];
+
+      return `
+        <!-- HERO -->
+        <section class="relative flex min-h-[100svh] flex-col overflow-hidden">
+          <div class="absolute inset-0">
+            <img src="images/hero-kitchen.jpg" alt="OR KITCHENS" class="animate-hero-zoom h-full w-full object-cover" />
+            <div class="bg-hero-fade absolute inset-0"></div>
+            <div class="bg-hero-scrim absolute inset-0"></div>
+          </div>
+          <div class="relative mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-5 pb-10 pt-28 md:px-8 md:pb-16 md:pt-36">
+            <div class="reveal">
+              <span class="glass eyebrow inline-flex items-center gap-3 rounded-full border border-border px-4 py-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                <span>${t("hero_eyebrow")}</span>
+              </span>
+            </div>
+            <div class="reveal" style="transition-delay: 150ms">
+              <h1 class="mt-6 max-w-4xl text-[2.6rem] leading-[1.06] text-ivory sm:text-6xl md:mt-8 md:text-8xl">
+                ${t("hero_title")}
+              </h1>
+            </div>
+            <div class="reveal" style="transition-delay: 300ms">
+              <p class="mt-5 max-w-xl text-base leading-relaxed text-ivory/85 sm:text-lg md:mt-8 md:text-xl">
+                ${t("hero_subtitle")}
+              </p>
+            </div>
+            <div class="reveal mt-8 flex flex-wrap gap-3 md:mt-10" style="transition-delay: 450ms">
+              <a href="#contact" onclick="navigate('contact')" class="btn-hero flex w-full items-center justify-center rounded-full px-8 py-4 text-base sm:w-auto">
+                ${t("cta_consult")}
+              </a>
+              <a href="#projects" onclick="navigate('projects')" class="btn-glass flex w-full items-center justify-center rounded-full px-8 py-4 text-base sm:w-auto">
+                ${t("cta_view_projects")}
+              </a>
+            </div>
+          </div>
+
+          <div class="relative mx-auto w-full max-w-7xl px-5 pb-20 md:px-8 md:pb-10">
+            <div class="reveal glass relative grid grid-cols-3 overflow-hidden rounded-2xl border border-border divide-x divide-x-reverse divide-border" style="transition-delay: 600ms">
+              <span class="gold-line pointer-events-none absolute inset-x-0 top-0" aria-hidden="true"></span>
+              <div class="px-2.5 py-4 text-center md:px-8 md:py-7">
+                <div class="font-display text-2xl tabular-nums text-gradient-gold sm:text-3xl md:text-5xl">${t("stat_1_value")}</div>
+                <div class="mt-1 text-[0.72rem] leading-snug text-ivory/75 md:text-sm">${t("stat_1_label")}</div>
+              </div>
+              <div class="px-2.5 py-4 text-center md:px-8 md:py-7">
+                <div class="font-display text-2xl tabular-nums text-gradient-gold sm:text-3xl md:text-5xl">${t("stat_2_value")}</div>
+                <div class="mt-1 text-[0.72rem] leading-snug text-ivory/75 md:text-sm">${t("stat_2_label")}</div>
+              </div>
+              <div class="px-2.5 py-4 text-center md:px-8 md:py-7">
+                <div class="font-display text-2xl tabular-nums text-gradient-gold sm:text-3xl md:text-5xl">${t("stat_3_value")}</div>
+                <div class="mt-1 text-[0.72rem] leading-snug text-ivory/75 md:text-sm">${t("stat_3_label")}</div>
+              </div>
+            </div>
+            <div class="mt-6 hidden justify-center md:flex">
+              <i data-lucide="arrow-down" class="h-5 w-5 animate-float-slow text-primary/70"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="overflow-hidden border-y border-border py-6" dir="ltr">
+          <div class="animate-marquee flex w-max gap-12 whitespace-nowrap">
+            ${[...marqueeWords, ...marqueeWords].map(w => `
+              <span class="flex items-center gap-12 font-display text-3xl text-foreground/40 md:text-5xl">
+                ${w}
+                <span class="text-primary">✦</span>
+              </span>
+            `).join("")}
+          </div>
+        </div>
+
+        <!-- ABOUT TEASER -->
+        <section class="mx-auto grid max-w-7xl items-center gap-14 px-5 py-28 md:grid-cols-2 md:px-8 md:py-36">
+          <div class="reveal relative">
+            <div class="img-zoom overflow-hidden rounded-3xl border border-border">
+              <img src="images/designer-studio.jpg" alt="${t("about_title")}" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+            </div>
+            <div class="card-luxe absolute -bottom-8 end-6 hidden max-w-[235px] p-6 md:block">
+              <div class="font-display text-5xl text-gradient-gold">360°</div>
+              <div class="mt-1 text-sm leading-snug text-muted-foreground">${t("about_badge_label")}</div>
+            </div>
+          </div>
+          <div>
+            <div class="reveal">
+              <span class="eyebrow">${t("section_about")}</span>
+              <h2 class="mt-4 text-4xl leading-tight text-foreground md:text-6xl">${t("about_title")}</h2>
+            </div>
+            <div class="reveal" style="transition-delay: 150ms">
+              <p class="mt-8 text-lg leading-loose text-muted-foreground">${t("about_text_1")}</p>
+              <a href="#about" onclick="navigate('about')" class="btn-gold mt-10 inline-flex items-center justify-center rounded-full px-8 py-4 text-base">
+                ${t("cta_read_more")}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section-band relative py-24 md:py-36">
+          <div class="bg-radial-glow pointer-events-none absolute inset-0" aria-hidden="true"></div>
+          <div class="relative mx-auto max-w-7xl px-5 md:px-8">
+            <div class="reveal text-center">
+              <span class="eyebrow">${t("section_services")}</span>
+              <h2 class="mt-4 text-4xl text-foreground md:text-6xl">${t("section_services_title")}</h2>
+            </div>
+            <div class="mt-16 grid gap-6 md:grid-cols-3">
+              ${[
+                { cat: "kitchen", icon: "chef-hat", img: "images/kitchen-olive.jpg", title: t("service_kitchen_title"), text: t("service_kitchen_text"), offset: "" },
+                { cat: "bedroom", icon: "bed-double", img: "images/bedroom-suite.jpg", title: t("service_bedroom_title"), text: t("service_bedroom_text"), offset: "md:mt-10" },
+                { cat: "closets", icon: "library", img: "images/living-media-wall.jpg", title: t("service_closets_title"), text: t("service_closets_text"), offset: "" }
+              ].map((s, i) => `
+                <div class="reveal" style="transition-delay: ${i * 120}ms">
+                  <a href="#projects" onclick="navigate('projects', '${s.cat}')" class="img-zoom group relative block overflow-hidden rounded-3xl border border-border transition-colors duration-500 hover:border-primary/45 ${s.offset}">
+                    <div class="relative aspect-[3/4]">
+                      <img src="${s.img}" alt="${s.title}" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/55 to-ink/10"></div>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col justify-between p-7">
+                      <span class="glass flex h-14 w-14 items-center justify-center rounded-full border border-border text-primary">
+                        <i data-lucide="${s.icon}" class="h-6 w-6"></i>
+                      </span>
+                      <div>
+                        <span class="font-display text-sm text-primary">0${i + 1}</span>
+                        <h3 class="mt-2 text-3xl text-ivory md:text-4xl">${s.title}</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-ivory/80">${s.text}</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-xs font-medium tracking-wide text-primary transition-transform duration-300 group-hover:translate-x-[-4px]">
+                          <span>${t("cta_explore")}</span>
+                          <i data-lucide="${arrowIcon}" class="h-4 w-4"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURED PROJECTS -->
+        <section class="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-36">
+          <div class="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+            <div class="reveal">
+              <span class="eyebrow">${t("section_featured")}</span>
+              <h2 class="mt-4 text-4xl text-foreground md:text-6xl">${t("section_featured_title")}</h2>
+            </div>
+            <div class="reveal">
+              <a href="#projects" onclick="navigate('projects', 'all')" class="btn-gold inline-flex items-center justify-center rounded-full px-8 py-4 text-base">
+                ${t("cta_all_projects")}
+              </a>
+            </div>
+          </div>
+          <div class="mt-16 grid gap-6 md:grid-cols-6">
+            ${featured.map((p, i) => {
+              const span = i === 0 ? "md:col-span-4 md:row-span-2" : i < 3 ? "md:col-span-2" : "md:col-span-3";
+              const aspect = i === 0 ? "aspect-[4/5] md:aspect-auto md:h-full md:min-h-[640px]" : i < 3 ? "aspect-[4/5] md:aspect-auto md:h-[308px]" : "aspect-[4/3]";
+              const pTitle = currentLang === "he" ? p.title_he : p.title_en;
+              const pLoc = currentLang === "he" ? p.loc_he : p.loc_en;
+              return `
+                <div class="reveal ${span}" style="transition-delay: ${(i % 3) * 120}ms">
+                  <div onclick="openLightbox('${p.img}', '${pTitle.replace(/'/g, "\\'")}', '${pLoc.replace(/'/g, "\\'")}')" class="img-zoom group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-border">
+                    <div class="${aspect} w-full">
+                      <img src="${p.img}" alt="${pTitle}" loading="lazy" class="h-full w-full object-cover" />
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent opacity-80 transition-opacity group-hover:opacity-95"></div>
+                    <div class="absolute inset-x-0 bottom-0 flex items-end justify-between p-6 md:p-8">
+                      <div>
+                        <span class="text-xs tracking-wider text-primary">${pLoc}</span>
+                        <h3 class="mt-1 text-2xl text-ivory md:text-3xl">${pTitle}</h3>
+                      </div>
+                      <span class="glass flex h-11 w-11 items-center justify-center rounded-full border border-border text-primary transition-transform group-hover:scale-110">
+                        <i data-lucide="${arrowIcon}" class="h-5 w-5"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section-band py-24 md:py-36">
+          <div class="mx-auto max-w-7xl px-5 md:px-8">
+            <div class="reveal text-center">
+              <span class="eyebrow">${t("section_process")}</span>
+              <h2 class="mt-4 text-4xl text-foreground md:text-6xl">${t("process_title")}</h2>
+            </div>
+            <div class="relative mt-20 grid gap-10 md:grid-cols-4 md:gap-6">
+              <div class="gold-line absolute inset-x-0 top-7 hidden md:block" aria-hidden="true"></div>
+              ${[1, 2, 3, 4].map((n, i) => `
+                <div class="reveal relative text-center" style="transition-delay: ${i * 140}ms">
+                  <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-primary/50 bg-background font-display text-xl text-primary">
+                    0${n}
+                  </div>
+                  <h3 class="mt-6 text-2xl text-foreground">${t(`process_${n}_title`)}</h3>
+                  <p class="mx-auto mt-3 max-w-[260px] text-sm leading-relaxed text-muted-foreground">${t(`process_${n}_text`)}</p>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="mx-auto max-w-7xl px-5 py-28 md:px-8 md:py-36">
+          <div class="reveal text-center">
+            <span class="eyebrow">${t("section_testimonials")}</span>
+            <h2 class="mt-4 text-4xl text-foreground md:text-6xl">${t("section_testimonials_title")}</h2>
+          </div>
+          <div class="mt-16 grid gap-6 md:grid-cols-3">
+            ${testimonialsData.map((tm, i) => `
+              <div class="reveal" style="transition-delay: ${i * 120}ms">
+                <figure class="card-luxe flex h-full flex-col justify-between p-8">
+                  <i data-lucide="quote" class="h-8 w-8 text-primary/60"></i>
+                  <blockquote class="mt-6 flex-1 font-display text-xl leading-relaxed text-foreground">
+                    “${currentLang === "he" ? tm.text_he : tm.text_en}”
+                  </blockquote>
+                  <figcaption class="mt-8 flex items-center gap-3 text-sm text-primary">
+                    <span class="h-px w-8 bg-primary/60"></span>
+                    <span>${currentLang === "he" ? tm.name_he : tm.name_en}</span>
+                  </figcaption>
+                </figure>
+              </div>
+            `).join("")}
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="relative mx-auto max-w-7xl px-5 py-20 md:px-8">
+          <div class="grid items-center gap-12 md:grid-cols-2">
+            <div class="reveal">
+              <span class="eyebrow">${t("section_contact")}</span>
+              <h2 class="mt-4 text-4xl text-foreground md:text-6xl">${t("cta_title")}</h2>
+              <p class="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">${t("cta_text")}</p>
+            </div>
+            <div class="reveal" style="transition-delay: 150ms">
+              ${renderContactForm()}
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function renderProjects() {
+      const arrowIcon = currentLang === "he" ? "arrow-up-left" : "arrow-up-right";
+      const filtered = currentCategory === "all" ? projectsData : projectsData.filter(p => p.category === currentCategory);
+      const cats = [
+        { id: "all", label: t("cat_all") },
+        { id: "kitchen", label: t("cat_kitchen") },
+        { id: "bedroom", label: t("cat_bedroom") },
+        { id: "closets", label: t("cat_closets") }
+      ];
+
+      return `
+        <section class="mx-auto max-w-7xl px-5 pb-24 pt-36 md:px-8 md:pt-44">
+          <div class="text-center">
+            <span class="eyebrow">${t("nav_projects")}</span>
+            <h1 class="mt-4 text-5xl text-foreground md:text-7xl">${t("projects_title")}</h1>
+            <p class="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">${t("projects_subtitle")}</p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="mt-12 flex flex-wrap justify-center gap-3">
+            ${cats.map(c => `
+              <button type="button" onclick="navigate('projects', '${c.id}')" class="rounded-full border px-6 py-2.5 text-sm transition-all ${currentCategory === c.id ? 'border-primary bg-primary text-primary-foreground font-semibold' : 'border-border text-foreground/80 hover:border-primary/50'}">
+                ${c.label}
+              </button>
+            `).join("")}
+          </div>
+
+          <!-- Grid -->
+          <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            ${filtered.map(p => {
+              const pTitle = currentLang === "he" ? p.title_he : p.title_en;
+              const pLoc = currentLang === "he" ? p.loc_he : p.loc_en;
+              return `
+                <div onclick="openLightbox('${p.img}', '${pTitle.replace(/'/g, "\\'")}', '${pLoc.replace(/'/g, "\\'")}')" class="img-zoom group relative cursor-pointer overflow-hidden rounded-3xl border border-border">
+                  <div class="aspect-[4/5] w-full">
+                    <img src="${p.img}" alt="${pTitle}" loading="lazy" class="h-full w-full object-cover" />
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent"></div>
+                  <div class="absolute inset-x-0 bottom-0 flex items-end justify-between p-6">
+                    <div>
+                      <span class="text-xs tracking-wider text-primary">${pLoc}</span>
+                      <h3 class="mt-1 text-2xl text-ivory">${pTitle}</h3>
+                    </div>
+                    <span class="glass flex h-10 w-10 items-center justify-center rounded-full border border-border text-primary">
+                      <i data-lucide="${arrowIcon}" class="h-4 w-4"></i>
+                    </span>
+                  </div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        </section>
+      `;
+    }
+
+    function renderAbout() {
+      return `
+        <section class="mx-auto max-w-7xl px-5 pb-24 pt-36 md:px-8 md:pt-44">
+          <div class="grid items-center gap-14 md:grid-cols-2">
+            <div>
+              <span class="eyebrow">${t("section_about")}</span>
+              <h1 class="mt-4 text-5xl leading-tight text-foreground md:text-7xl">${t("about_title")}</h1>
+              <p class="mt-8 text-lg leading-loose text-muted-foreground">${t("about_text_1")}</p>
+              <p class="mt-6 text-lg leading-loose text-muted-foreground">${t("about_text_2")}</p>
+              <a href="#contact" onclick="navigate('contact')" class="btn-hero mt-10 inline-flex items-center justify-center rounded-full px-8 py-4 text-base">
+                ${t("cta_consult")}
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-3xl border border-border">
+              <img src="images/designer-studio.jpg" alt="OR KITCHENS Studio" class="aspect-[4/5] w-full object-cover" />
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function renderContactPage() {
+      return `
+        <section class="mx-auto max-w-7xl px-5 pb-24 pt-36 md:px-8 md:pt-44">
+          <div class="grid items-start gap-12 md:grid-cols-2">
+            <div>
+              <span class="eyebrow">${t("section_contact")}</span>
+              <h1 class="mt-4 text-5xl text-foreground md:text-7xl">${t("cta_title")}</h1>
+              <p class="mt-6 text-lg leading-relaxed text-muted-foreground">${t("cta_text")}</p>
+              <div class="mt-10 space-y-5 text-base">
+                <a href="tel:052-4480444" class="flex items-center gap-4 text-foreground hover:text-primary">
+                  <span class="flex h-12 w-12 items-center justify-center rounded-full border border-border text-primary"><i data-lucide="phone" class="h-5 w-5"></i></span>
+                  <span dir="ltr">052-4480444</span>
+                </a>
+                <a href="mailto:orkitchens@gmail.com" class="flex items-center gap-4 text-foreground hover:text-primary">
+                  <span class="flex h-12 w-12 items-center justify-center rounded-full border border-border text-primary"><i data-lucide="mail" class="h-5 w-5"></i></span>
+                  <span>orkitchens@gmail.com</span>
+                </a>
+                <div class="flex items-center gap-4 text-foreground">
+                  <span class="flex h-12 w-12 items-center justify-center rounded-full border border-border text-primary"><i data-lucide="map-pin" class="h-5 w-5"></i></span>
+                  <span>${t("contact_address")}</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              ${renderContactForm()}
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function render() {
+      const root = document.getElementById("app-root");
+      if (currentRoute === "projects") root.innerHTML = renderProjects();
+      else if (currentRoute === "about") root.innerHTML = renderAbout();
+      else if (currentRoute === "contact") root.innerHTML = renderContactPage();
+      else root.innerHTML = renderHome();
+
+      // Update static i18n elements (header & footer)
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[currentLang][key]) el.textContent = dict[currentLang][key];
+      });
+
+      // Highlight active nav link
+      document.querySelectorAll(".nav-link").forEach(el => {
+        const isActive = el.getAttribute("data-nav") === currentRoute;
+        el.classList.toggle("text-primary", isActive);
+        el.classList.toggle("text-foreground/80", !isActive);
+      });
+
+      // Re-init icons & scroll reveal
+      lucide.createIcons();
+      initRevealObserver();
+    }
+
+    function initRevealObserver() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    }
+
+    // Header scroll effect
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("site-header");
+      if (window.scrollY > 24) {
+        header.classList.add("glass", "border-b", "border-border", "py-3");
+        header.classList.remove("py-6");
+      } else {
+        header.classList.remove("glass", "border-b", "border-border", "py-3");
+        header.classList.add("py-6");
+      }
+    }, { passive: true });
+
+    // Initial render
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    render();
+  </script>
+</body>
+</html>
