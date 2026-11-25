@@ -1,0 +1,2 @@
+ALTER TABLE public.projects DROP CONSTRAINT IF EXISTS projects_category_check;
+ALTER TABLE public.projects ADD CONSTRAINT projects_category_check CHECK (category IN ('kitchen', 'bedroom', 'closets', 'bathroom'));
